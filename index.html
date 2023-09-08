@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=["ichigo","rukia","kon","inoue"];
+        var len=[];
+        var len1=[];
+        let n=arr.length;
+        var max;
+        var temp;
+        for(let i=0;i<n;i++){
+            len[i]=arr[i].length;
+            
+        }
+        for(let l=0;l<n;l++){
+            len1[l]=len[l];
+        }
+        for(let j=0;j<n;j++){
+            max=len[j];   
+            if((len[j+1])&&(max>len[j+1])){
+                temp=len[j+1];
+                len[j]=temp;
+                len[j+1]=max;
+                
+            }
+        }
+       
+        for(let k=0;k<n;k++){
+            if(max==len1[k]){
+                document.write("the longest string length is :"+len1[k]);
+                document.write("<br>the longest string is :"+arr[k]);
+            }
+        }
+    </script>
+</body>
+</html>
